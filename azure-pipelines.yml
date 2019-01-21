@@ -21,8 +21,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: $(Build.SourcesDirectory)/*
-    contents: 'Dockerfile' 
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: '**\Dockerfile' 
     targetFolder:  $BUILD_ARTIFACTSTAGINGDIRECTORY
     #cleanTargetFolder: false # Optional
     #overWrite: false # Optional
