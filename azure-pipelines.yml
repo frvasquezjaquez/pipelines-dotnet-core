@@ -18,5 +18,14 @@ steps:
   inputs:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: 'Dockerfile' 
+    targetFolder:  $BUILD_ARTIFACTSTAGINGDIRECTORY
+    #cleanTargetFolder: false # Optional
+    #overWrite: false # Optional
+    #flattenFolders: false # Optiona
  
 - task: PublishBuildArtifacts@1
